@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Error404Page.scss";
-import image from '../assets/image-404.jpeg'
+import image from "../assets/image-404.jpeg";
 
 function Error404Page() {
   return (
@@ -12,7 +12,9 @@ function Error404Page() {
         src={image}
         alt="404 image sad rover lost"
       />
-        <Link className="Error404Page__Link"  to="/">Take me Home</Link>
+      <Link className="Error404Page__Link" to="/">
+        Take me Home
+      </Link>
     </div>
   );
 }

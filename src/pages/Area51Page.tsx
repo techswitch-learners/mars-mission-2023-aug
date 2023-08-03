@@ -1,6 +1,6 @@
 import "./Area51Page.scss";
 import { useState, useEffect } from "react";
-import image from '../assets/image-area-51-no-access.png'
+import image from "../assets/image-area-51-no-access.png";
 import { Link } from "react-router-dom";
 
 const checkSecurityCookie = () => {
@@ -50,13 +50,15 @@ function Area51Page() {
     </div>
   ) : (
     <div className="Area51__forbidden">
-    <h1>You shouldn't be here</h1>
+      <h1>You shouldn't be here</h1>
       <img
-      src={image}
-      className="Area51__forbidden__image"
-      alt='men in black'
+        src={image}
+        className="Area51__forbidden__image"
+        alt="men in black"
       />
-      <Link className="Area51__forbidden__Link"  to="/">Take me Home</Link>
+      <Link className="Area51__forbidden__Link" to="/">
+        Take me Home
+      </Link>
     </div>
   );
 }
