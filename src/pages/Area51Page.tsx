@@ -1,5 +1,7 @@
 import "./Area51Page.scss";
 import { useState, useEffect } from "react";
+import image from '../assets/image-area-51-no-access.png'
+import { Link } from "react-router-dom";
 
 const checkSecurityCookie = () => {
   const cookieName = "security-clearance";
@@ -24,9 +26,9 @@ function Area51Page() {
   }, []);
 
   return securityCleared ? (
-    <div className="Area51Page">
+    <div className="Area51__cleared">
       <h1>Area 51.</h1>
-      <h2 className="Area51Page__classification">TOP SECRET</h2>
+      <h2 className="Area51__classification">TOP SECRET</h2>
       <p>
         You have now been cleared to find out the most secret discoveries from
         our Mars mission.
@@ -42,12 +44,20 @@ function Area51Page() {
       </p>
       <img
         src="https://paul7dxb.github.io/hosted-assets/mars/martian-selfie.jpeg"
-        className="Area51__image"
+        className="Area51__cleared__image"
       />
-      <h2 className="Area51Page__classification">TOP SECRET</h2>
+      <h2 className="Area51__classification">TOP SECRET</h2>
     </div>
   ) : (
+    <div className="Area51__forbidden">
     <h1>You shouldn't be here</h1>
+      <img
+      src={image}
+      className="Area51__forbidden__image"
+      alt='men in black'
+      />
+      <Link className="Area51__forbidden__Link"  to="/">Take me Home</Link>
+    </div>
   );
 }
 

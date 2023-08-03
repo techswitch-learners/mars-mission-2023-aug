@@ -205,6 +205,6 @@ function QuizPage() {
       {content}
     </div>
   );
-}
+};
 
 export default QuizPage;
